@@ -1,38 +1,98 @@
-.App {
-  text-align: center;
-}
+/* App.css */
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
+body {
+  font-family: 'Poppins', sans-serif; 
+  background-color: #f9f9f9; 
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  align-items: center;
+  height: 100vh;
+}
+
+.container {
+  background-color: #ffffff; /* White background for the container */
+  border-radius: 15px; /* Rounded corners */
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1); /* Soft shadow */
+  padding: 30px; /* Increased padding */
+  width: 90%; /* Full width with some margin */
+  
+  transition: transform 0.3s; /* Smooth hover effect */
+}
+
+.container:hover {
+  transform: scale(1.02); /* Slightly enlarge on hover */
+}
+
+.header {
+  text-align: center;
+  color: #4a4a4a; /* Darker text color */
+  font-size: 28px; /* Larger font size */
+  margin-bottom: 20px;
+}
+
+textarea {
+  width: 90%;
+  height: 150px;
+  border: 2px solid #d1d1d1; /* Light border */
+  border-radius: 10px; /* Rounded corners */
+  padding: 15px; /* Padding for textarea */
+  font-size: 16px;
+  resize: none;
+  transition: border-color 0.3s;
+  background-color: #f0f8ff; /* Light pastel background */
+}
+
+textarea:focus {
+  border-color: #a0d8e1; /* Focus border color */
+  outline: none;
+}
+
+select {
+  width: 100%;
+  padding: 12px;
+  border: 2px solid #d1d1d1; /* Light border */
+  border-radius: 10px; /* Rounded corners */
+  font-size: 16px;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  background-color: #f0f8ff; /* Light pastel background */
+  transition: border-color 0.3s;
+}
+
+select:focus {
+  border-color: #a0d8e1; /* Focus border color */
+  outline: none;
+}
+
+button {
+  width: 100%;
+  padding: 12px;
+  background-color: #a0d8e1; /* Pastel button color */
   color: white;
+  border: none;
+  border-radius: 10px; /* Rounded corners */
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
 }
 
-.App-link {
-  color: #61dafb;
+button:hover {
+  background-color: #7bb8c8; /* Darker pastel on hover */
+  transform: translateY(-2px); /* Lift effect on hover */
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+h2 {
+  text-align: center;
+  color: #4a4a4a; /* Darker text color */
+  margin-top: 20px;
+}
+
+p {
+  color: #555;
+  font-size: 18px;
+  margin-top: 10px;
+  background-color: pink;
+  width: 100%;
+  height: 100px;
 }

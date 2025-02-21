@@ -42,7 +42,7 @@ function App() {
     <div className='container'>
       <h1 className='header'>TEXT PROCESSOR</h1>
       <textarea
-        rows={6}
+        rows={5}
         placeholder='Enter text to translate'
         value={inputText}
         onChange={(e) => setInputText(e.target.value)}
