@@ -3,6 +3,7 @@ import "../styles/MainPage.css"
 
 const MainPage = () => {
   return (
+    <div>
     <div className='main'>
         <div className="header">
                 TEXT TRANSLATOR
@@ -19,14 +20,15 @@ const MainPage = () => {
                 </li>
             </ul>
             <div className="chat-input">
-                <textarea placeholder='type something'></textarea> <span id="translate-btn"> translate</span>
-                <span id="translate-btn"> summarize</span>
+                <textarea placeholder='type something' required></textarea> <span id="translate-btn"> translate</span>
+                <span id="summarize-btn"> summarize</span>
             </div>
             
             </div>
             
 
             
+    </div>
     </div>
   )
 }
