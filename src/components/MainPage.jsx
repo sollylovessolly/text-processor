@@ -3,7 +3,9 @@ import "../styles/MainPage.css";
 
 const MainPage = () => {
   const [userMessage, setUserMessage] = useState("");
-  const [chats, setChats] = useState([]);
+  const [chats, setChats] = useState([
+    { message: "Hello! What do you want to translate?", className: "incoming" }
+  ]);
 
   const createChatLi = (message, className) => {
     return { message, className };
@@ -12,9 +14,17 @@ const MainPage = () => {
   const handleChat = () => {
     const trimmedMessage = userMessage.trim();
     if (!trimmedMessage) return;
-    
-    setChats([...chats, createChatLi(trimmedMessage, "outgoing")]);
+
+    setChats((prevChats) => [
+      ...prevChats,
+      createChatLi(trimmedMessage, "outgoing"),
+    ]);
+
     setUserMessage("");
+
+    setTimeout(() => {
+      setChats((prevChats) => [...prevChats, createChatLi("thinking...", "incoming")]);
+    }, 600);
   };
 
   return (
@@ -22,10 +32,6 @@ const MainPage = () => {
       <div className="header">TEXT TRANSLATOR</div>
       <div className="container">
         <ul className='chatbox'>
-          <li className="chat incoming">
-            <span>AI</span>
-            <p>hello <br /> what do you want to translate</p>
-          </li>
           {chats.map((chat, index) => (
             <li key={index} className={`chat ${chat.className}`}>
               <p>{chat.message}</p>
